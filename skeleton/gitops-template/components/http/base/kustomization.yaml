@@ -16,6 +16,3 @@ resources:
 - deployment.yaml
 - route.yaml
 - service.yaml
-{%- if values.rhoaiSelected %}
-- rhoai/
-{%- endif %}
