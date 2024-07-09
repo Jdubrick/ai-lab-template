@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: codegen
-  title: Code Generation Application Local Deploy
+  title: Code Generation Application
   description: Code Generation Application example that generate code in countless programming languages.
   tags: ["ai", "llamacpp", "vllm", "python"]
 spec:

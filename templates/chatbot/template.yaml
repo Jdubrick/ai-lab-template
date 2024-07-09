@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: chatbot
-  title: Chatbot Application Local Deploy
+  title: Chatbot Application
   description: Chatbot Application example with LLM enabled chat applications
   tags: ["ai", "llamacpp", "vllm", "python"]
 spec:
