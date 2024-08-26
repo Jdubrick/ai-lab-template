@@ -353,30 +353,30 @@ spec:
         repoUrl: https://${{ parameters.githubServer if parameters.hostType === 'GitHub' else parameters.gitlabServer }}/${{ parameters.repoOwner }}/${{ parameters.repoName }}-gitops.git
         path: './app-of-apps'
     # PR with empty commit
-    - id: trigger-build-pr
-      name: PR to Trigger Pipeline Build
-      action: publish:github:pull-request
-      if: ${{ parameters.hostType === 'GitHub' }}
-      input:
-        repoUrl: ${{ parameters.githubServer }}?owner=${{ parameters.repoOwner }}&repo=${{ parameters.repoName }}
-        branchName: trigger-pipeline
-        gitCommitMessage: trigger pipeline build
-        description: "pr to trigger pipeline build"
-        title: trigger pipeline build
-        sourcePath: source
-        targetBranchName: ${{ parameters.branch }}
+    # - id: trigger-build-pr
+    #   name: PR to Trigger Pipeline Build
+    #   action: publish:github:pull-request
+    #   if: ${{ parameters.hostType === 'GitHub' }}
+    #   input:
+    #     repoUrl: ${{ parameters.githubServer }}?owner=${{ parameters.repoOwner }}&repo=${{ parameters.repoName }}
+    #     branchName: trigger-pipeline
+    #     gitCommitMessage: trigger pipeline build
+    #     description: "pr to trigger pipeline build"
+    #     title: trigger pipeline build
+    #     sourcePath: source
+    #     targetBranchName: ${{ parameters.branch }}
     # dispatch the workflow to automerge the pr and trigger the pipeline build
-    - id: trigger_gh_workflow
-      name: Trigger GitHub workflow
-      action: github:actions:dispatch
-      if: ${{ parameters.hostType === 'GitHub' }}
-      input:
-        repoUrl: ${{ parameters.githubServer }}?owner=${{ parameters.repoOwner }}&repo=${{ parameters.repoName }}
-        branchOrTagName: ${{ parameters.branch }}
-        workflowId: automerge.yml
-        workflowInputs: {
-          pr_url: "${{ steps['trigger-build-pr'].output.remoteUrl }}"
-        }
+    # - id: trigger_gh_workflow
+    #   name: Trigger GitHub workflow
+    #   action: github:actions:dispatch
+    #   if: ${{ parameters.hostType === 'GitHub' }}
+    #   input:
+    #     repoUrl: ${{ parameters.githubServer }}?owner=${{ parameters.repoOwner }}&repo=${{ parameters.repoName }}
+    #     branchOrTagName: ${{ parameters.branch }}
+    #     workflowId: automerge.yml
+    #     workflowInputs: {
+    #       pr_url: "${{ steps['trigger-build-pr'].output.remoteUrl }}"
+    #     }
 
 
   # Outputs are displayed to the user after a successful execution of the template.
