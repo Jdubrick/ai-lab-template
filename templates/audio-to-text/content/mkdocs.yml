@@ -6,6 +6,7 @@ nav:
   - Pipelines: pipelines.md
   - GitOps Application: gitops-application.md
   - OpenShift AI: rhoai.md
+  - Test: testdoc.md
 
 plugins:
   - techdocs-core
