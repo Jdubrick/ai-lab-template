@@ -375,7 +375,7 @@ spec:
         appName: ${{ parameters.name }}-app-of-apps
         # name set in rhdh config
         argoInstance: ${ARGOCD__DEFAULT__INSTANCE}
-        namespace: ${ARGOCD__DEFAULT__NAMESPACE}
+        namespace: ai-rhdh
         repoUrl: https://${{ parameters.githubServer if parameters.hostType === 'GitHub' else parameters.gitlabServer }}/${{ parameters.repoOwner }}/${{ parameters.repoName }}-gitops.git
         path: './app-of-apps'
     # PR with empty commit
