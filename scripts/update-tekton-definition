@@ -3,7 +3,7 @@
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
 ROOTDIR=$(realpath $SCRIPTDIR/..)
 
-REPO="${PIPELINE_REPO:-https://github.com/Jdubrick/rhdh-pipelines}"
+REPO="${PIPELINE_REPO:-https://github.com/jrichter1/rhdh-pipelines}"
 BRANCH="${PIPELINE_BRANCH:-yaml-lint}"
 RAW_BASE=$(echo $REPO/$BRANCH |  sed "s/github.com/raw.githubusercontent.com/")  
 REPONAME=$(basename $REPO)
