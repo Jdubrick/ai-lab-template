@@ -9,7 +9,7 @@ export APP_TAGS='["ai", "detr", "python"]'
 export APP_RUN_COMMAND="streamlit run object_detection_client.py"
 
 # https://github.com/redhat-ai-dev/developer-images/tree/main/model/detr-resnet-101%20
-export INIT_CONTAINER="quay.io/redhat-ai-dev/detr-resnet-101:latest"
+export INIT_CONTAINER="quay.io/tpetkos/detr-resnet-101:latest"
 export INIT_CONTAINER_COMMAND="['cp', '-R', '/model/detr-resnet-101', '/shared/detr-resnet-101']"
 
 # https://github.com/containers/ai-lab-recipes/tree/main/model_servers/object_detection_python
