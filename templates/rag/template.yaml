@@ -361,7 +361,7 @@ spec:
           # SED_DB_START
           # Database is required for the RAG templates
           dbRequired: true
-          dbContainer: docker.io/chromadb/chroma:0.5.23
+          dbContainer: quay.io/rh-ee-jdubrick/chroma:test
           dbPort: 8000
           # SED_DB_END
           supportApp: true

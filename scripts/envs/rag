@@ -37,7 +37,7 @@ export APP_INTERFACE_CONTAINER="quay.io/redhat-ai-dev/rag:latest"
 # Database configurations
 export SUPPORT_DB=true
 # export DB_CONTAINER="quay.io/redhat-ai-dev/chroma:latest"
-export DB_CONTAINER="docker.io/chromadb/chroma:0.5.23"
+export DB_CONTAINER="quay.io/rh-ee-jdubrick/chroma:test"
 export DB_PORT=8000
 
 export TEMPLATE_SOURCE_URL="https://github.com/redhat-ai-dev/ai-lab-samples/tree/main/rag"
