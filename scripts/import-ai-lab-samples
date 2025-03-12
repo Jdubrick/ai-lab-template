@@ -6,8 +6,8 @@ SKELETON_DIR=$ROOT_DIR/skeleton
 TEMPLATE_DIR=$ROOT_DIR/templates
 TEMPLATE_TECHDOC_TYPE=app
 
-REPO="${SAMPLE_REPO:-https://github.com/Jdubrick/ai-lab-samples}"
-BRANCH="${SAMPLE_BRANCH:-test-update-samples}"
+REPO="${SAMPLE_REPO:-https://github.com/redhat-ai-dev/ai-lab-samples}"
+BRANCH="${SAMPLE_BRANCH:-main}"
 DIRNAME=$(basename $REPO)
 
 mkdir -p $SCRIPTDIR/samples 
