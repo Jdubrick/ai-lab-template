@@ -6,7 +6,7 @@ source $ROOTDIR/properties
 
 #get gitops templates
 REPO="${GITOPS_REPO:-https://github.com/thepetk/ai-lab-app}"
-BRANCH="${GITOPS_BRANCH:-remote-cluster-deployment}"
+BRANCH="${GITOPS_BRANCH:-feat/remote-cluster-deployment}"
 REPONAME=$(basename $REPO)
 
 TEMPDIR=$ROOTDIR/temp
