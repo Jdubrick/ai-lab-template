@@ -9,7 +9,7 @@ export APP_TAGS='["ai", "whispercpp", "python", "asr"]'
 export APP_RUN_COMMAND="streamlit run whisper_client.py"
 
 # https://github.com/redhat-ai-dev/developer-images/tree/main/model/whisper-small
-export INIT_CONTAINER="quay.io/redhat-ai-dev/whisper-small:latest"
+export INIT_CONTAINER="quay.io/rh-ee-jdubrick/whisper-small:testingic"
 
 # https://github.com/containers/ai-lab-recipes/blob/main/model_servers/whispercpp/base/Containerfile
 # https://github.com/ggerganov/whisper.cpp/blob/v1.5.4/examples/server/README.md

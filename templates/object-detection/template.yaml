@@ -304,7 +304,7 @@ spec:
           webhookSecret: pipelines-secret
           webhookSecretKey: webhook.secret
           defaultBranch: main
-          initContainer: quay.io/redhat-ai-dev/detr-resnet-101:latest
+          initContainer: quay.io/rh-ee-jdubrick/detr-resnet-101:testingci
           modelInitCommand: "['cp', '-R', '/model/detr-resnet-101', '/shared/detr-resnet-101']"
           modelPath: "/model/detr-resnet-101"
           appContainer: ${{ 'quay.io/redhat-ai-dev/ai-template-bootstrap-app:latest' if parameters.hostType === 'GitHub' else 'quay.io/redhat-ai-dev/object_detection:latest' }}
