@@ -10,7 +10,7 @@ spec:
       serviceAccountName: pipeline
       containers:
         - name: initialize-namespace
-          image: quay.io/rh-ee-jdubrick/utils:testingci
+          image: quay.io/redhat-ai-dev/utils:latest
           command:
             - /bin/bash
             - -c

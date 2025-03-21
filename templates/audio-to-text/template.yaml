@@ -304,7 +304,7 @@ spec:
           webhookSecret: pipelines-secret
           webhookSecretKey: webhook.secret
           defaultBranch: main
-          initContainer: quay.io/rh-ee-jdubrick/whisper-small:testingic
+          initContainer: quay.io/rh-ee-jdubrick/whisper-small:testingci
           modelInitCommand: "['/usr/bin/install', '/model/model.file', '/shared/']"
           modelPath: "/model/model.file"
           appContainer: ${{ 'quay.io/redhat-ai-dev/ai-template-bootstrap-app:latest' if parameters.hostType === 'GitHub' else 'quay.io/redhat-ai-dev/audio-to-text:latest' }}
