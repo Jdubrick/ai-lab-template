@@ -20,6 +20,6 @@ Based on the input from the AI Software Template, a deployment with the followin
 
 {%- if values.supportApp %}
 
-An application built from ${{ values.templateSource }} will be stored in ${{ values.imageRegistry }}/${{ values.imageOrg }}/${{ values.imageName }} and deployed via Gitops. This application is accessible on port ${{ values.appPort }}
+An application built from ${{ values.templateSource }} will be stored in *${{ values.imageRegistry }}/${{ values.imageOrg }}/${{ values.imageName }}* and deployed via Gitops. This application is accessible on port **${{ values.appPort }}**
 
 {%- endif %}
