@@ -372,6 +372,13 @@ spec:
           dbPort: 8000
           # SED_DB_END
           supportApp: true
+          modelServerName: ${{ parameters.modelServer }}
+          modelServiceSrcVLLM: https://github.com/rh-aiservices-bu/llm-on-openshift/tree/main/llm-servers/vllm/gpu
+          modelServiceSrcOther: https://github.com/containers/ai-lab-recipes/tree/main/model_servers/llamacpp_python
+          templateSource: https://github.com/redhat-ai-dev/ai-lab-samples/tree/main/rag
+          imageRegistry: ${{ parameters.imageRegistry }}
+          imageOrg: ${{ parameters.imageOrg }}
+          imageName: ${{ parameters.imageName }}
     - action: fs:rename
       id: renameComponentDir
       name: Rename Component Directory

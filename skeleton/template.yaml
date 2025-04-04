@@ -412,6 +412,13 @@ spec:
           dbPort: ${DB_PORT}
           # SED_DB_END
           supportApp: ${SUPPORT_APP}
+          modelServerName: ${{ parameters.modelServer }}
+          modelServiceSrcVLLM: ${MODEL_SERVICE_SRC_VLLM}
+          modelServiceSrcOther: ${MODEL_SERVICE_SRC_OTHER}
+          templateSource: ${TEMPLATE_SOURCE_URL}
+          imageRegistry: ${{ parameters.imageRegistry }}
+          imageOrg: ${{ parameters.imageOrg }}
+          imageName: ${{ parameters.imageName }}
     - action: fs:rename
       id: renameComponentDir
       name: Rename Component Directory

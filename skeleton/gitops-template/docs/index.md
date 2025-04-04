@@ -1,15 +1,25 @@
-# ai-lab-template-gitops
+# AI Software Template Gitops
 
-# Gitops Repo Patterns
+This repository contains the necessary content required for managing Gitops. It was created as part of an AI Software Template. The associated source component is available for reference through the **Overview** tab. You can find an example of this below.
 
-This repository contains an HTTP Gitops repository format component for use as the AI-Lab Gitops template.
+![Overview Tab](./images/overview-dependency)
 
-## HTTP
+## Deployment
 
-This contains a deployment with the following characteristics:
+{%- if values.existingModelServer %}
+During the template setup a custom model server was entered. Therefore no model service was deployed by this application.
 
-**Model service image** `${{ values.modelServiceContainer }}` **listening on port** `${{ values.modelServicePort }}`.
+{%- else %}
+Based on the input from the AI Software Template, a deployment with the following characterisics was made:
 
-**App interface image** `${{ values.appContainer }}` **listening on port** `${{ values.appPort }}` for service and routing.
+**Model Service:** [${{ values.modelServerName }}]({%- if values.vllmSelected %} ${{ values.modelServiceSrcVLLM }} {%- else %} ${{ values.modelServiceSrcOther }} {%- endif %})
 
-This matches the current AI-Lab software template default deployment.
+**Port:** ${{ values.modelServicePort }}
+
+{%- endif %}
+
+{%- if values.supportApp %}
+
+An application built from ${{ values.templateSource }} will be stored in ${{ values.imageRegistry }}/${{ values.imageOrg }}/${{ values.imageName }} and deployed via Gitops. This application is accessible on port ${{ values.appPort }}
+
+{%- endif %}

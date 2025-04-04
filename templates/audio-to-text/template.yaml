@@ -330,6 +330,13 @@ spec:
           rhoaiSelected: ${{ parameters.rhoaiSelected }}
           # SED_APP_SUPPORT_END
           supportApp: true
+          modelServerName: ${{ parameters.modelServer }}
+          modelServiceSrcVLLM: 
+          modelServiceSrcOther: https://github.com/containers/ai-lab-recipes/tree/main/model_servers/whispercpp
+          templateSource: https://github.com/redhat-ai-dev/ai-lab-samples/tree/main/audio-to-text
+          imageRegistry: ${{ parameters.imageRegistry }}
+          imageOrg: ${{ parameters.imageOrg }}
+          imageName: ${{ parameters.imageName }}
     - action: fs:rename
       id: renameComponentDir
       name: Rename Component Directory
