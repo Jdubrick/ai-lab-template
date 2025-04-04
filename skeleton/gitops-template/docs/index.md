@@ -2,7 +2,7 @@
 
 This repository contains the necessary content required for managing Gitops. It was created as part of an AI Software Template. The associated source component is available for reference through the **Overview** tab. You can find an example of this below.
 
-![Overview Tab](./images/overview-dependency)
+![Overview Tab](./images/overview-dependency.png)
 
 ## Deployment
 
