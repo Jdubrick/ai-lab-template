@@ -2,16 +2,17 @@ apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
   name: '${{ values.name }}-on-pull-request'
+  namespace: ci-hub
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request]"
     pipelinesascode.tekton.dev/on-target-branch: "[${{ values.defaultBranch }}]"
     pipelinesascode.tekton.dev/max-keep-runs: "2"
-    pipelinesascode.tekton.dev/pipeline: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/pipelines/docker-build-ai-rhdh-pull-request.yaml"
-    pipelinesascode.tekton.dev/task-0: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/tasks/init.yaml"
-    pipelinesascode.tekton.dev/task-1: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/tasks/git-clone.yaml"
-    pipelinesascode.tekton.dev/task-2: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/tasks/buildah-ai-rhdh.yaml"
-    pipelinesascode.tekton.dev/task-3: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/tasks/show-sbom-rhdh.yaml"
-    pipelinesascode.tekton.dev/task-4: "https://raw.githubusercontent.com/redhat-ai-dev/rhdh-pipelines/main/pac/tasks/summary.yaml"
+    pipelinesascode.tekton.dev/pipeline: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/pipelines/docker-build-ai-rhdh-pull-request.yaml"
+    pipelinesascode.tekton.dev/task-0: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/init.yaml"
+    pipelinesascode.tekton.dev/task-1: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/git-clone.yaml"
+    pipelinesascode.tekton.dev/task-2: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/buildah-ai-rhdh.yaml"
+    pipelinesascode.tekton.dev/task-3: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/show-sbom-rhdh.yaml"
+    pipelinesascode.tekton.dev/task-4: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/summary.yaml"
   labels:
     argocd/app-name: ${{ values.name }}
     janus-idp.io/tekton: ${{ values.name }}
