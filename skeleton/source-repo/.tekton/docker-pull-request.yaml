@@ -17,7 +17,7 @@ metadata:
     argocd/app-name: ${{ values.name }}
     janus-idp.io/tekton: ${{ values.name }}
     backstage.io/kubernetes-id: ${{ values.name }}
-    backstage.io/kubernetes-namespace: ${{ values.namespace }}
+    backstage.io/kubernetes-namespace: ci-hub
     app.kubernetes.io/part-of: ${{ values.name }}
 spec:
   params:
