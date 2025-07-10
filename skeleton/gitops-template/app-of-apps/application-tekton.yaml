@@ -11,7 +11,7 @@ spec:
     repoURL: ${{ values.repoURL }}.git
     targetRevision: main
   destination:
-    namespace: ci-hub
+    namespace: ${{ values.namespace }}
     server: https://kubernetes.default.svc
   syncPolicy:
     managedNamespaceMetadata:
