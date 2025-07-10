@@ -16,7 +16,7 @@ spec:
   {%- else %}
     server: https://kubernetes.default.svc
   {%- endif %}
-    namespace: ${{ values.namespace }}
+    namespace: ci-hub
   syncPolicy:
     managedNamespaceMetadata:
       labels:
