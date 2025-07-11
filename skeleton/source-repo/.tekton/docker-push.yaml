@@ -13,6 +13,7 @@ metadata:
     pipelinesascode.tekton.dev/task-3: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/update-deployment-gitops.yaml"
     pipelinesascode.tekton.dev/task-4: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/show-sbom-rhdh.yaml"
     pipelinesascode.tekton.dev/task-5: "https://raw.githubusercontent.com/Jdubrick/rhdh-pipelines/test-centralized-tekton/pac/tasks/summary.yaml"
+  namespace: ci-hub
   labels:
     argocd/app-name: ${{ values.name }}
     janus-idp.io/tekton: ${{ values.name }}
