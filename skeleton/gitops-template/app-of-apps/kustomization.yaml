@@ -8,6 +8,6 @@ commonLabels:
   app.kubernetes.io/part-of: ${{ values.name }}
 resources:
   - application-dev.yaml
-  {%- if values.deployOnRemoteCluster %}
+  {%- if not values.deployOnRemoteCluster %}
   - application-tekton.yaml
   {%- endif %}

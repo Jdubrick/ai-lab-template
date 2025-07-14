@@ -6,6 +6,6 @@ patchesStrategicMerge:
 {%- endif %}
 resources:
   - ../../base
-  {%- if not values.deployOnRemoteCluster %}
+  {%- if values.deployOnRemoteCluster %}
   - tekton-repositories/
   {%- endif %}
